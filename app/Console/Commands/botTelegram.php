@@ -60,7 +60,7 @@ class botTelegram extends Command
 // make info in terminal
     $photo = file_get_contents($game->photo);
       Telegram::sendPhoto([
-                 'chat_id' => 307598748,
+                 'chat_id' => env('chatid'),
                  'photo' => $game->photo,
 	                'caption' => $game->name . '-' .$interval->format("%a days, %h hours, %i minutes, %s seconds"),
              ]);
